@@ -434,7 +434,7 @@ class GAROM(object):
         h=torch.tensor(value).float()
         train = torch.utils.data.TensorDataset(h, x)
         train_loader = torch.utils.data.DataLoader(train, batch_size=50, shuffle=True)
-        self.train(train_loader)    
+        self.train(train_loader,epochs=2000)    
 
     def predict(self,parameter):   
         parameter=torch.tensor(parameter).float()
