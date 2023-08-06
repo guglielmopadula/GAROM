@@ -1,24 +1,10 @@
-# GAROM
+# GAROM (packaged version)
 GAROM-Generative Adversarial Reduce Order Modelling
 
-This repository contains the implementation of the GAROM model presented in [https://arxiv.org/abs/2305.15881](https://arxiv.org/abs/2305.15881), as well as the experiments to reproduce the results. A more user-friendly implementation will be released in [**PINA**](https://github.com/mathLab/PINA/tree/master/pina) soon.
+This repository contains a packaged version of the GAROM model presented in [https://arxiv.org/abs/2305.15881](https://arxiv.org/abs/2305.15881). It is entirely based on the  [https://github.com/dario-coscia/GAROM](original GAROM repo), to which all the credits go. 
 
-## Reproduce article results
-
-### Baseline results
-Go into the `experiments/POD` folder. The programm can be lauched by:
+To install the package, simply do
 ```
-bash perform_pod.sh
+ pip install .
 ```
-
-### GAROM results
-Go into the `experiments/GAROM` folder. The training programm can be lauched by:
-```
-bash perform_tests.sh
-```
-Once the train in finished, the results can be visualized by:
-```
-bash perform_analysis.sh
-```
-
-**NOTE**: The program lauches the simulations for regularized and not-regularized GAROM for all hidden dimensions for 5 different training. This reproduces all the results of the paper, but the overall time is considerable (~2h training for one model and one hidden dimension).
+For examples on how to use the package, consult the original repo. 
