@@ -167,8 +167,8 @@ class GAROM(object):
 
         # set default  optimizer hyperparameters
         if optimizer_kwargs is None:
-            optimizer_kwargs = {"generator": {"lr": 0.001},
-                                "discriminator": {"lr": 0.001}}
+            optimizer_kwargs = {"generator": {"lr": 0.0005},
+                                "discriminator": {"lr": 0.0005}}
 
         # setting optimizers
         self._gen_optim = optimizers["generator"](
