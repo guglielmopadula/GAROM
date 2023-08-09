@@ -130,8 +130,8 @@ class GAROM(object):
         :Example:
             >>> optimizers = {'generator': torch.optim.Adam,
                               'discriminator': torch.optim.Adam}
-            >>> optimizers_kwds = {'generator': {"lr": 0.001},
-                                   'discriminator': {"lr": 0.001}}
+            >>> optimizers_kwds = {'generator': {"lr": 0.01},
+                                   'discriminator': {"lr": 0.01}}
             >>> schedulers = {'generator': torch.optim.lr_scheduler.StepLR,
                               'discriminator': torch.optim.lr_scheduler.StepLR}
             >>> schedulers_kwds = {'generator': {"gamma": 0.8,
@@ -167,8 +167,8 @@ class GAROM(object):
 
         # set default  optimizer hyperparameters
         if optimizer_kwargs is None:
-            optimizer_kwargs = {"generator": {"lr": 0.0005},
-                                "discriminator": {"lr": 0.0005}}
+            optimizer_kwargs = {"generator": {"lr": 0.002},
+                                "discriminator": {"lr": 0.002}}
 
         # setting optimizers
         self._gen_optim = optimizers["generator"](
